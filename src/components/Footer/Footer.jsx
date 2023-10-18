@@ -1,71 +1,63 @@
-
-
-import {FaFacebookF,FaDribbble,FaLinkedinIn,FaInstagram,FaBehance} from 'react-icons/fa'
+import { Link } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className=' bg-white py-24'>
-        <div className='md:max-w-[1480px] m-auto grid md:grid-cols-5 max-[780px]:grid-cols-2  gap-5 max-w-[600px]  px-4 md:px-0'>
-            
-            <div className='col-span-2 ml-5'>
-              
-                <h3 className='text-2xl font-bold mt-10'>Contact Us</h3>
-                <h3 className='py-2 text-[#6D737A]'>Call : +123 400 123</h3>
-                <h3 className='py-2 text-[#6D737A]'>Visit <br></br> Contact Us page for more information</h3>
-                <h3 className='py-2 text-[#363A3D]'>Email: example@mail.com</h3>
-                <div className='flex gap-4 py-4'>
-                        <div className='p-4 bg-[#E9F8F3] rounded-xl'><FaFacebookF size={25} style={{color:'#4DC39E'}} /></div>
-                        <div className='p-4 bg-[#E9F8F3] rounded-xl'><FaDribbble size={25} style={{color:'#4DC39E'}} /></div>
-                        <div className='p-4 bg-[#E9F8F3] rounded-xl'><FaLinkedinIn size={25} style={{color:'#4DC39E'}} /></div>
-                        <div className='p-4 bg-[#E9F8F3] rounded-xl'><FaInstagram size={25} style={{color:'#4DC39E'}} /></div>
-                        <div className='p-4 bg-[#E9F8F3] rounded-xl'><FaBehance size={25} style={{color:'#4DC39E'}} /></div>
-
-                </div>
-
+    <div className="bg-gray-300 py-8">
+      <div className="container mx-auto py-6 lg:py-12">
+        <div className="lg:flex lg:justify-between lg:items-start flex-wrap"> {/* Allow content to wrap on smaller screens */}
+          <div className="lg:w-1/2 mb-6 lg:mb-0 text-center lg:text-left lg:text-lg"> {/* Adjusted margins and text size */}
+            <Link to="hero" spy={true} smooth={true} offset={-50} duration={500}>
+             <span className="text-3xl font-bold">Food</span>
+            </Link>
+            <div className="text-gray-600 mt-4 lg:mt-0">
+              <p className="mb-4">
+                Solution for easy and flexible meal solutions for households. <br /> You can trust us anywhere through this platform.
+              </p>
+              <p>
+                &copy; 2023 Made with <i className="bi bi-heart-fill text-red-500"></i> by&nbsp;
+                <a href="" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-primaryitemcolor">
+                  JahidCodes
+                </a>
+              </p>
             </div>
-
-            <div>
-                <h3 className='text-2xl font-bold'>Explore</h3>
-                <ul className='py-6 text-[#6D737A]'>
-                    <li className='py-2'>Home</li>
-                    <li className='py-2'>Blog</li>
-                    <li className='py-2'>Contact</li>
-
-                </ul>
+          </div>
+         <div className="flex flex-1 justify-between"> 
+         <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg"> {/* Adjusted margins and text size */}
+            <h3 className="text-lg font-semibold mb-4">About</h3>
+            <p className="mb-2">Our Company</p>
+            <p className="mb-2">Career</p>
+            <p className="mb-2">Investors Relations</p>
+            <p>Social Impact</p>
+          </div>
+          <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg "> {/* Adjusted margins and text size */}
+            <h3 className="text-lg font-semibold mb-4">Social</h3>
+            <div className="mb-4">
+              <div> {/* Use flex layout to control the icon arrangement */}
+                <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </a>
+                <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
+                  <FontAwesomeIcon icon={faTwitter} size="2x" />
+                </a>
+                <a href="" target="_blank" rel="noreferrer" className="inline-block">
+                  <FontAwesomeIcon icon={faFacebook} size="2x" />
+                </a>
+              </div>
             </div>
-
-            <div>
-                <h3 className='text-2xl font-bold'>Category</h3>
-                <ul className='py-6 text-[#6D737A]'>
-                    <li className='py-2'>Design</li>
-                    <li className='py-2'>Charity</li>
-                    <li className='py-2'>Culture</li>
-                    <li className='py-2'>Festi</li>
-                    <li className='py-2'>Lifestyle</li>
-                    <li className='py-2'>Photography</li>
-                    <li className='py-2'>Music</li>
-
-                </ul>
-            </div>
-
-            <div className='max-[780px]:col-span-2'>
-                <h3 className='text-2xl font-bold'>Subscribe</h3>
-                <h3 className='py-2 text-[#6D737A]'>Praesent nulla massa, hendrerit <br></br> vestibulum gravida in, feugiat auctor felis.</h3>
-                <form className='py-4'>
-                    <input 
-                        className='bg-[#F2F3F4] p-4 w-full rounded' 
-                        placeholder='Email here' 
-                    />
-                    <button className='max-[780px]:w-full my-4 px-5 py-3 rounded-md bg-[#20B486] text-white font-medium'>Subscribe Now</button>
-
-                </form>
-
-
-            </div>
-        
+          </div>
+         </div>
         </div>
+      </div>
+      <p className="text-center text-gray-600 py-4">
+        &copy; 2022 Made with <i className="bi bi-heart-fill text-red-500"></i> by&nbsp;
+        <a href="" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-primaryitemcolor">
+          JahidCodes
+        </a>
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
