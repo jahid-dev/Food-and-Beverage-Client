@@ -1,10 +1,20 @@
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Toaster } from "react-hot-toast";
+
 const Home = () => {
+    AOS.init();
+   
     return (
         <div>
-            <h1>This is home</h1>
+            <div>
+                <Toaster></Toaster>
+            </div>
+            
         </div>
     );
 };
 
-export default Home;
+
+export default Home

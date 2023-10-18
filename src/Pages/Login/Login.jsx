@@ -4,7 +4,7 @@ import { AuthContext } from "../../firebase/Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FcGoogle } from 'react-icons/fc';
 
-const SignIn = () => {
+const Login = () => {
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -107,4 +107,5 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;
+export default Login;
+
