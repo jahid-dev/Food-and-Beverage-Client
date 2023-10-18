@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import  { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { AuthContext } from '../../../firebase/Provider/AuthProvider';
 
 const Navbar = () => {
+//     const { user, logOut } = useContext(AuthContext);
+//   console.log(user);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -22,13 +25,13 @@ const Navbar = () => {
                                 <NavLink className="hover:text-gray-500" to="/">Home</NavLink>
                             </li>
                             <li>
-                                <NavLink className="hover:text-gray-500" to="/">Solution</NavLink>
+                                <NavLink className="hover:text-gray-500" to="/">Contact</NavLink>
                             </li>
                             <li>
-                                <NavLink className="hover:text-gray-500" to="/">Resource</NavLink>
+                                <NavLink className="hover:text-gray-500" to="/">Add Product</NavLink>
                             </li>
                             <li>
-                                <NavLink className="hover:text-gray-500" to="/">Developers</NavLink>
+                                <NavLink className="hover:text-gray-500" to="/">Services</NavLink>
                             </li>
                             <li>
                                 <NavLink className="hover:text-gray-500" to="/">Pricing</NavLink>
@@ -36,7 +39,28 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center gap-6">
-                        <button className="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                    {/* <div className="navbar-end">
+          {user ? (
+            <>
+              <p>{user.displayName ? user.displayName : user.email}</p>
+              {user.photoURL ? (
+                <img className="w-11 rounded-full mx-3" src={user?.photoURL} alt="" />
+              ) : (
+                <FaUserAlt className="text-2xl  mx-3"></FaUserAlt>
+              )}
+
+              <button onClick={logOut} className="bg-slate-800 px-8 py-3">
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <NavLink className="mx-5 px-4 py-3" to="/login">
+                Login
+              </NavLink>
+            </>
+          )}
+        </div> */}
                         {menuOpen ? (
                             <FaTimes onClick={toggleMenu} className="text-3xl cursor-pointer md:hidden" />
                         ) : (
