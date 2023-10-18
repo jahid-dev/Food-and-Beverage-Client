@@ -18,7 +18,7 @@ const HeroSection = () => {
               <img
                 src="https://i.ibb.co/3SWpWL2/Food-Image-ccbc8a18b3ce6a6bf1f5.webp"
                 alt="Food pic"
-                className="food__image mx-auto md:ml-auto w-full md:w-10/12 lg:w-9/12"
+                className="transition-transform transform hover:scale-105 mx-auto md:ml-auto w-full md:w-10/12 lg:w-9/12"
               />
             </div>
           </div>
