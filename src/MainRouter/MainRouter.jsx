@@ -9,6 +9,7 @@ import Contact from "../Pages/Contact/Contact";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import CompanyProductDetails from "../components/MainSection/CompanyProductDetails/CompanyProductDetails";
 import SoloFoodDetails from "../components/MainSection/SoloFoodDetails/SoloFoodDetails";
+import UpdateProduct from "../components/MainSection/UpdateProduct/UpdateProduct";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
       {
         path: "/solofooddetails/:id",
         element: <SoloFoodDetails></SoloFoodDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/product/${params.id}`),
       },
