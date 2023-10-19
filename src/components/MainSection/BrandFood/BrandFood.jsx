@@ -5,22 +5,36 @@ const BrandFood = ({ product }) => {
     const { ProductName, productCompany, _id, ProductType, price, description, rating, photo } =
         product;
     return (
-        <div className="max-w-7xl  mx-auto">
+        <div className="max-w-7xl mx-auto p-4">
             <div>
                 <div>
-                    <div className="card my-10  card-compact w-[500px]  shadow-xl">
-                        <figure><img className="w-96 h-80" src={photo} alt="Shoes" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{ProductName}</h2>
-                            <h2 className="card-title">Brand: {productCompany}</h2>
-                            <p>{description}</p>
-                            <p className="text-2xl font-semibold">{price}$</p>
-                            <div className="card-actions justify-end">
-                                <Link to={`/update/${_id}`}  >
-                                    <button className="btn btn-warning hover:btn-success">Update Product <span className="text-xl"><LuSettings2></LuSettings2></span> </button>
+                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl card my-10 card-compact w-full md:w-96 lg:w-2/4 xl:w-3/5 shadow-lg">
+                        <figure>
+                            <img className="w-full h-auto" src={photo} alt={ProductName} />
+                        </figure>
+                        <div className="card-body p-4">
+                            <h2 className="card-title text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
+                                {ProductName}
+                            </h2>
+                            <h2 className="card-title text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                                Brand: {productCompany}
+                            </h2>
+                            <p className="text-sm md:text-base lg:text-lg xl:text-xl mt-4">
+                                {description}
+                            </p>
+                            <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mt-2">
+                                {price}$
+                            </p>
+                            <div className="card-actions flex justify-between items-center mt-4">
+                                <Link to={`/update/${_id}`}>
+                                    <button className="btn btn-warning hover:btn-success text-base md:text-lg lg:text-xl xl:text-2xl">
+                                        Update Product <span className="text-xl md:text-2xl lg:text-3xl xl:text-4xl"><LuSettings2 /></span>
+                                    </button>
                                 </Link>
-                                <Link to={`/solofooddetails/${_id}`} >
-                                    <button className="btn btn-warning hover:btn-success">View Product</button>
+                                <Link to={`/solofooddetails/${_id}`}>
+                                    <button className="btn btn-warning hover:btn-success text-base md:text-lg lg:text-xl xl:text-2xl">
+                                        View Product
+                                    </button>
                                 </Link>
                             </div>
                         </div>
