@@ -6,6 +6,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ErrorElement from "../Components/ErrorElement/ErrorElement";
 import Contact from "../Pages/Contact/Contact";
+import AddProduct from "../Pages/AddProduct/AddProduct";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path:"/addproduct",
+        element:<AddProduct></AddProduct>
+      }
     ],
   },
 ]);

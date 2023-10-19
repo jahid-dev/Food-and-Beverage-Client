@@ -37,6 +37,14 @@ const Navbar = () => {
         >
           Contact US
         </NavLink>
+        <NavLink
+          to="/addproduct"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "border-4 rounded-lg  border-[#3ce7ae]" : ""
+          }
+        >
+          Add Product
+        </NavLink>
       </div>
       {user ? (
         <div className="lg:flex">
