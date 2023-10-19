@@ -154,7 +154,7 @@ const AddProduct = () => {
                 Company Name
               </option>
               <option>Coca-Cola</option>
-              <option>McDonalds</option>
+              <option>McDonald's</option>
               <option>Starbucks</option>
               <option>PepsiCo</option>
               <option>Nestlé</option>

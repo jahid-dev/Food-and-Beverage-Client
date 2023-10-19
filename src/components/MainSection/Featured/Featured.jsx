@@ -5,7 +5,7 @@ const Featured = ({ company }) => {
     return (
         <div className="max-w-7xl  mx-auto">
             <div >
-                <Link to={`/brandDetails/${_id}`}>
+                <Link to={`/companyproductdetails/${_id}`}>
                     <button className="group relative">
                         <div className="group-hover:bg-opacity-80 transition-opacity duration-700">
                             <div className="card w-80 h-80 hover:opacity-50   image-full relative">

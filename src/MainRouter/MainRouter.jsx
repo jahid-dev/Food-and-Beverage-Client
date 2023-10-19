@@ -7,6 +7,8 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ErrorElement from "../Components/ErrorElement/ErrorElement";
 import Contact from "../Pages/Contact/Contact";
 import AddProduct from "../Pages/AddProduct/AddProduct";
+import CompanyProductDetails from "../components/MainSection/CompanyProductDetails/CompanyProductDetails";
+import SoloFoodDetails from "../components/MainSection/SoloFoodDetails/SoloFoodDetails";
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,18 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("http://localhost:5000/foodCompany"),
+      },
+      {
+        path:'/companyproductdetails/:id',
+        element:<CompanyProductDetails></CompanyProductDetails>,
+        loader: ({ params }) =>
+        fetch(`http://localhost:5000/foodCompany/${params.id}`),
+      },
+      {
+        path: "/solofooddetails/:id",
+        element: <SoloFoodDetails></SoloFoodDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
       },
       {
         path: "/contact",
