@@ -6,9 +6,10 @@ import router from './MainRouter/MainRouter'
 import 'aos/dist/aos.css';
 import AuthProvider from './firebase/Provider/AuthProvider'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-        <AuthProvider>
+       <AuthProvider>
         <RouterProvider router={router}></RouterProvider>
         </AuthProvider>
   </React.StrictMode>,

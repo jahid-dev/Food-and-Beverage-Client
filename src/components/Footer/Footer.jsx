@@ -4,13 +4,16 @@ import { faInstagram, faTwitter, faFacebook } from "@fortawesome/free-brands-svg
 
 const Footer = () => {
   return (
-    <div className="bg-gray-300 py-8">
+    <div className="mt-20">
       <div className="container mx-auto py-6 lg:py-12">
         <div className="lg:flex lg:justify-between lg:items-start flex-wrap"> {/* Allow content to wrap on smaller screens */}
           <div className="lg:w-1/2 mb-6 lg:mb-0 text-center lg:text-left lg:text-lg"> {/* Adjusted margins and text size */}
-            <Link to="/" className="flex items-center">
-              <img className="w-14" src='https://i.ibb.co/C51GJcr/m2i8-Z5-N4-H7-N4b1-K9.png' alt="logo" /> {/* Adjust the width of the logo */}
-            </Link>
+            <div className="flex items-center ">
+              <Link to="/" className="flex items-center">
+                <img className="w-14" src="https://i.ibb.co/C51GJcr/m2i8-Z5-N4-H7-N4b1-K9.png" alt="logo" />
+                <div className="text-3xl font-semibold ml-2">TastyTwirl</div>
+              </Link>
+            </div>
             <div className="text-gray-600 mt-4 lg:mt-0">
               <p className="mb-4">
                 Solution for easy and flexible meal solutions for households. <br /> You can trust us anywhere through this platform.
