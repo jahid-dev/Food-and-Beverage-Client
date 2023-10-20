@@ -3,39 +3,27 @@
 const ErrorPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center mx-auto">
-             <section className="relative z-10 bg-[#FF444A] py-[120px]">
-        <div className="container">
-          <div className="flex -mx-4">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[400px] text-center">
-                <h2 className="mb-2 text-[50px] font-bold leading-none text-white sm:text-[80px] md:text-[100px]">
-                  404
-                </h2>
-                <h4 className="mb-3 text-[22px] font-semibold leading-tight text-white">
-                  Oops! That page can not be found
-                </h4>
-                <p className="mb-8 text-lg text-white">
-                  The page you are looking for it maybe deleted
-                </p>
-                <a
-                  href="/"
-                  className="inline-block px-8 py-3 text-base font-semibold text-center text-white transition border border-white rounded-lg hover:bg-white hover:text-primary"
-                >
-                  Go to Home
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute top-0 left-0 flex items-center justify-between w-full h-full space-x-5 -z-10 md:space-x-8 lg:space-x-14">
-          <div className="h-full w-1/3 bg-gradient-to-t from-[#FFFFFF14] to-[#C4C4C400]" />
-          <div className="flex w-1/3 h-full">
-            <div className="h-full w-1/2 bg-gradient-to-b from-[#FFFFFF14] to-[#C4C4C400]" />
-            <div className="h-full w-1/2 bg-gradient-to-t from-[#FFFFFF14] to-[#C4C4C400]" />
-          </div>
-          <div className="h-full w-1/3 bg-gradient-to-b from-[#FFFFFF14] to-[#C4C4C400]" />
-        </div>
-      </section>
+            <section className="bg-gray-100 py-16">
+                <div className="container">
+                    <div className="max-w-md mx-auto text-center">
+                        <h2 className="text-4xl font-semibold text-gray-800">
+                            404 - Page Not Found
+                        </h2>
+                        <h4 className="text-xl font-semibold text-gray-600 mt-4">
+                            Oops! That page cannot be found.
+                        </h4>
+                        <p className="text-gray-600 mt-4">
+                            The page you are looking for may have been deleted.
+                        </p>
+                        <a
+                            href="/"
+                            className="inline-block px-6 py-3 mt-8 text-base font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition duration-300"
+                        >
+                            Go to Home
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

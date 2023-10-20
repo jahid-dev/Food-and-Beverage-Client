@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const WhyChooseUs = () => {
   return (
@@ -9,8 +9,8 @@ const WhyChooseUs = () => {
           <p className="text-base text-textcolor">This is what makes our product different</p>
         </div>
 
-        <div className="flex flex-wrap justify-center">
-          <div className="w-full md:w-1/2 lg:w-1/3 bg-white text-center flex flex-col items-center p-10 shadow-card_one m-4" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="100">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="bg-white text-center flex flex-col items-center p-10 shadow-card_one" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="100">
             <div className="card_image_div">
               <img src='https://i.ibb.co/fvvQtmZ/hamburger-9d6855e1535bd7831a905fe10a5ca642.png' alt="Hamburger" />
             </div>
@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 bg-white text-center flex flex-col items-center p-10 shadow-card_two m-4" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="200">
+          <div className="bg-white text-center flex flex-col items-center p-10 shadow-card_two" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="200">
             <div className="card_image_div">
               <img src='https://i.ibb.co/Hzz6HLC/delivery-man-9a7ecb682383b4f41e7357b41fa3b117.png' alt="Delivery man" />
             </div>
@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-1/3 bg-white text-center flex flex-col items-center p-10 shadow-card_three m-4" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="300">
+          <div className="bg-white text-center flex flex-col items-center p-10 shadow-card_three" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-duration="700" data-aos-delay="300">
             <div className="card_image_div">
               <img src='https://i.ibb.co/0DfN1N3/top-food-384057d3fd5154bb9f3a133bad70e3a5.png' alt="Thumbs up" />
             </div>

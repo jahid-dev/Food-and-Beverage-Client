@@ -8,12 +8,12 @@ const BrandFood = ({ product }) => {
         <div className="max-w-7xl mx-auto p-4">
             <div>
                 <div>
-                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl card my-10 card-compact w-full md:w-96 lg:w-2/4 xl:w-3/5 shadow-lg">
+                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl card my-10 card-compact w-full md:w-96 lg:w-2/4 xl:w-3/5 shadow-lg ">
                         <figure>
-                            <img className="w-full h-auto" src={photo} alt={ProductName} />
+                            <img className="w-96 h-96" src={photo} alt={ProductName} />
                         </figure>
-                        <div className="card-body p-4">
-                            <h2 className="card-title text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
+                        <div className="card-body py-10 ">
+                            <h2 className="card-title text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold ">
                                 {ProductName}
                             </h2>
                             <h2 className="card-title text-lg md:text-xl lg:text-2xl xl:text-3xl">

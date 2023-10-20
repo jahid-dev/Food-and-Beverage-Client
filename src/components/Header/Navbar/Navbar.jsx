@@ -60,14 +60,6 @@ const Navbar = () => {
           Home
         </NavLink>
         <NavLink
-          to="/contact"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "border-b-4 rounded-lg  border-[#3ce7ae]" : ""
-          }
-        >
-          Contact Us
-        </NavLink>
-        <NavLink
           to="/addproduct"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "border-b-4 rounded-lg  border-[#3ce7ae]" : ""
@@ -81,7 +73,15 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? "border-b-4 rounded-lg  border-[#3ce7ae]" : ""
           }
         >
-          Cart
+         My Cart
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "border-b-4 rounded-lg  border-[#3ce7ae]" : ""
+          }
+        >
+          Contact Us
         </NavLink>
       </div>
       <div className="lg:hidden">
@@ -99,14 +99,14 @@ const Navbar = () => {
             <Link to="/" className="block text-xl py-2" onClick={closeMenu}>
               Home
             </Link>
-            <Link to="/contact" className="block text-xl py-2" onClick={closeMenu}>
-              Contact Us
-            </Link>
             <Link to="/addproduct" className="block text-xl py-2" onClick={closeMenu}>
             Add Product
             </Link>
             <Link to="/cart" className="block text-xl py-2" onClick={closeMenu}>
-            Cart
+            My Cart
+            </Link>
+            <Link to="/contact" className="block text-xl py-2" onClick={closeMenu}>
+              Contact Us
             </Link>
           </div>
         )}

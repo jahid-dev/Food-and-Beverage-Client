@@ -3,7 +3,7 @@ import AddCart from "./AddCart";
 import { AuthContext } from "../../firebase/Provider/AuthProvider";
 
 
-const MyCart = () => {
+const Cart = () => {
   const { user } = useContext(AuthContext);
   const [newCart, setNewCart] = useState([]);
   // console.log(user.email);
@@ -48,4 +48,4 @@ const MyCart = () => {
   );
 };
 
-export default MyCart;
+export default Cart;

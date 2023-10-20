@@ -31,16 +31,28 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          // Display a success message using Swal
+          // Create a custom SweetAlert with animations and additional content
           Swal.fire({
             title: 'Success!',
             text: 'Product Updated Successfully',
             icon: 'success',
-            confirmButtonText: 'Cool',
+            confirmButtonText: 'Awesome!',
+            customClass: {
+              popup: 'animated tada',
+              header: 'text-center',
+              title: 'text-2xl text-green-500 font-semibold',
+              content: 'text-lg text-gray-600',
+            },
+            showCloseButton: true,
+            showCancelButton: false,
+            showConfirmButton: true,
+            confirmButtonColor: '#42B883',
+            background: '#fff',
+            footer: '<p>Thank you for updating the product!</p>',
           });
         }
         form.reset();
-        form.classList.add("form-success"); // Add class for success message
+        form.classList.add('form-success');
       });
   };
 
@@ -130,7 +142,7 @@ const UpdateProduct = () => {
                 <option>Starbucks</option>
                 <option>PepsiCo</option>
                 <option>Nestlé</option>
-                <option>Kelloggs</option>
+                <option>Kellogg's</option>
               </select>
             </div>
           </div>

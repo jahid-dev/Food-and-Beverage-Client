@@ -41,11 +41,25 @@ const AddProduct = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
+          const successMessage = `You've successfully added ${newProduct.ProductName} to the ${newProduct.productCompany} collection!`;
+
           Swal.fire({
             title: 'Success!',
-            text: 'Product Added Successfully',
+            text: successMessage,
             icon: 'success',
             confirmButtonText: 'Cool',
+            customClass: {
+              container: 'custom-swal-container',
+              title: 'custom-swal-title',
+              confirmButton: 'custom-swal-confirm-button',
+            },
+            showCloseButton: true,
+            showClass: {
+              popup: 'animate__animated animate__backInDown',
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp',
+            },
           });
         }
         setFormValues({
@@ -158,7 +172,7 @@ const AddProduct = () => {
               <option>Starbucks</option>
               <option>PepsiCo</option>
               <option>Nestlé</option>
-              <option>Kelloggs</option>
+              <option>Kellogg's</option>
             </select>
           </div>
         </div>

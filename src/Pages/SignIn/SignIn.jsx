@@ -8,8 +8,7 @@ const SignIn = () => {
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const [error, setError] = useState(null); // State to hold the error message
-    
+    const [error, setError] = useState(null);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -18,25 +17,22 @@ const SignIn = () => {
 
         try {
             const result = await signInUser(email, password);
-            console.log(result.user);
-            toast.success("Login success");
+            toast.success("Welcome back, " + result.user.displayName + "!");
             navigate(location?.state ? location.state : "/");
             e.target.reset();
         } catch (error) {
-            console.error(error);
-            setError(error.message)
+            setError(error.message);
         }
     };
 
     const handleGoogleSignIn = () => {
         signInWithGoogle()
             .then((result) => {
-                console.log(result.user);
-                toast.success("Login success");
+                toast.success("Welcome back, " + result.user.displayName + "!");
                 navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
-                console.error(error);
+                setError(error.message);
             });
     };
 
@@ -56,7 +52,7 @@ const SignIn = () => {
                                 <input
                                     type="email"
                                     name="email"
-                                    placeholder="email"
+                                    placeholder="Your email"
                                     required
                                     className="input input-bordered"
                                 />
@@ -68,14 +64,14 @@ const SignIn = () => {
                                 <input
                                     type="password"
                                     name="password"
-                                    placeholder="password"
+                                    placeholder="Your password"
                                     required
                                     className="input input-bordered"
                                 />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">
+                                    <Link to="/forgot-password" className="label-text-alt link link-hover">
                                         Forgot password?
-                                    </a>
+                                    </Link>
                                 </label>
                             </div>
                             {error && <div className="text-error mt-2">{error}</div>}
@@ -99,7 +95,6 @@ const SignIn = () => {
                                 <FcGoogle className="mr-2" /> Sign in with Google
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>
