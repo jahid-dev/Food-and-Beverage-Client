@@ -75,6 +75,14 @@ const Navbar = () => {
         >
           Add Product
         </NavLink>
+        <NavLink
+          to="/cart"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "border-b-4 rounded-lg  border-[#3ce7ae]" : ""
+          }
+        >
+          Cart
+        </NavLink>
       </div>
       <div className="lg:hidden">
         <button onClick={toggleMenu} className="text-3xl">
@@ -96,6 +104,9 @@ const Navbar = () => {
             </Link>
             <Link to="/addproduct" className="block text-xl py-2" onClick={closeMenu}>
             Add Product
+            </Link>
+            <Link to="/cart" className="block text-xl py-2" onClick={closeMenu}>
+            Cart
             </Link>
           </div>
         )}

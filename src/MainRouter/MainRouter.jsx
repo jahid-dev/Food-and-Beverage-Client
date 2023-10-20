@@ -10,6 +10,7 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import CompanyProductDetails from "../components/MainSection/CompanyProductDetails/CompanyProductDetails";
 import SoloFoodDetails from "../components/MainSection/SoloFoodDetails/SoloFoodDetails";
 import UpdateProduct from "../components/MainSection/UpdateProduct/UpdateProduct";
+import Cart from "../Pages/Cart/Cart";
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path:"/addproduct",
         element:<AddProduct></AddProduct>
+      },
+      {
+        path:'/cart',
+        element:<Cart></Cart>
       }
     ],
   },

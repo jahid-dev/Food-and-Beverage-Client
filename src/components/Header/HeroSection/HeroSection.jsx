@@ -6,12 +6,12 @@ const HeroSection = () => {
             <div className="md:w-1/2 md:pr-10">
               <div className="text__div text-black">
                 <h1 className="font-semibold text-3xl md:text-4xl lg:text-5xl mb-6">
-                  Enjoy <span>home-made meals</span> far away from home
+                  Enjoy <span>food and beverage item</span> far away from home
                 </h1>
                 <p className="text-xl md:text-2xl lg:text-3xl mb-6">
                   Helping you enjoy comfortable and healthy food anywhere and anytime on the go
                 </p>
-                <a href="#dishes" className="bg-primaryitemcolor text-white py-3 px-6 rounded-full text-lg md:text-xl lg:text-2xl hover:text-white hover:bg-primaryitemcolor">Order Now</a>
+                <a href="#dishes" className=" bg-[#3ce7ae] text-gray-700 py-3 px-6 rounded-full text-lg md:text-xl lg:text-2xl hover:text-white hover:  ">Order Now</a>
               </div>
             </div>
             <div className="md:w-1/2 mt-6 md:mt-0">
