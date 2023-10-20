@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container mx-auto py-6 lg:py-12">
         <div className="lg:flex lg:justify-between lg:items-start flex-wrap"> {/* Allow content to wrap on smaller screens */}
           <div className="lg:w-1/2 mb-6 lg:mb-0 text-center lg:text-left lg:text-lg"> {/* Adjusted margins and text size */}
-            <Link to="hero" spy={true} smooth={true} offset={-50} duration={500}>
-             <span className="text-3xl font-bold">Food</span>
+            <Link to="/" className="flex items-center">
+              <img className="w-14" src='https://i.ibb.co/C51GJcr/m2i8-Z5-N4-H7-N4b1-K9.png' alt="logo" /> {/* Adjust the width of the logo */}
             </Link>
             <div className="text-gray-600 mt-4 lg:mt-0">
               <p className="mb-4">
@@ -23,31 +23,31 @@ const Footer = () => {
               </p>
             </div>
           </div>
-         <div className="flex flex-1 justify-between"> 
-         <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg"> {/* Adjusted margins and text size */}
-            <h3 className="text-lg font-semibold mb-4">About</h3>
-            <p className="mb-2">Our Company</p>
-            <p className="mb-2">Career</p>
-            <p className="mb-2">Investors Relations</p>
-            <p>Social Impact</p>
-          </div>
-          <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg "> {/* Adjusted margins and text size */}
-            <h3 className="text-lg font-semibold mb-4">Social</h3>
-            <div className="mb-4">
-              <div> {/* Use flex layout to control the icon arrangement */}
-                <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
-                  <FontAwesomeIcon icon={faInstagram} size="2x" />
-                </a>
-                <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
-                  <FontAwesomeIcon icon={faTwitter} size="2x" />
-                </a>
-                <a href="" target="_blank" rel="noreferrer" className="inline-block">
-                  <FontAwesomeIcon icon={faFacebook} size="2x" />
-                </a>
+          <div className="flex flex-1 justify-between">
+            <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg"> {/* Adjusted margins and text size */}
+              <h3 className="text-lg font-semibold mb-4">About</h3>
+              <p className="mb-2">Our Company</p>
+              <p className="mb-2">Career</p>
+              <p className="mb-2">Investors Relations</p>
+              <p>Social Impact</p>
+            </div>
+            <div className="lg:w-1/4 mt-6 lg:mt-0 lg:text-lg "> {/* Adjusted margins and text size */}
+              <h3 className="text-lg font-semibold mb-4">Social</h3>
+              <div className="mb-4">
+                <div> {/* Use flex layout to control the icon arrangement */}
+                  <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                  </a>
+                  <a href="" target="_blank" rel="noreferrer" className="inline-block lg:mr-4 lg:mb-0 mb-4">
+                    <FontAwesomeIcon icon={faTwitter} size="2x" />
+                  </a>
+                  <a href="" target="_blank" rel="noreferrer" className="inline-block">
+                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-         </div>
         </div>
       </div>
       <p className="text-center text-gray-600 py-4">
