@@ -22,25 +22,25 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/foodCompany"),
+        loader: () => fetch("https://food-and-beverage-server-xi.vercel.app/foodCompany"),
       },
       {
         path:'/companyproductdetails/:id',
         element:<PrivateRoute><CompanyProductDetails></CompanyProductDetails></PrivateRoute>,
         loader: ({ params }) =>
-        fetch(`http://localhost:5000/foodCompany/${params.id}`),
+        fetch(`https://food-and-beverage-server-xi.vercel.app/foodCompany/${params.id}`),
       },
       {
         path: "/solofooddetails/:id",
         element: <SoloFoodDetails></SoloFoodDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://food-and-beverage-server-xi.vercel.app/product/${params.id}`),
       },
       {
         path: '/update/:id',
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://food-and-beverage-server-xi.vercel.app/product/${params.id}`),
       },
       {
         path: "/login",

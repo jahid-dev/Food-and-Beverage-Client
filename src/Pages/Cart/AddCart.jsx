@@ -10,12 +10,10 @@ const AddCart = ({ newProduct }) => {
   const {
     _id,
     ProductName,
-    UserEmail,
     productCompany,
     ProductType,
     price,
     description,
-    rating,
     photo,
   } = newProduct;
 
@@ -40,7 +38,7 @@ const AddCart = ({ newProduct }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Make your DELETE request here and handle it accordingly
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://food-and-beverage-server-xi.vercel.app/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

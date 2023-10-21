@@ -6,9 +6,9 @@ import { AuthContext } from "../../firebase/Provider/AuthProvider";
 const Cart = () => {
   const { user } = useContext(AuthContext);
   const [newCart, setNewCart] = useState([]);
-  // console.log(user.email);
 
-  fetch("http://localhost:5000/cart")
+
+  fetch("https://food-and-beverage-server-xi.vercel.app/cart")
     .then((res) => res.json())
     .then((data) => {
       const filterCart = data.filter(

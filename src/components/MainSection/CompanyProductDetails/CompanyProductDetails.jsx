@@ -11,7 +11,7 @@ const CompanyProductDetails = () => {
   console.log(companyName);
 
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://food-and-beverage-server-xi.vercel.app/product")
       .then((res) => res.json())
       .then((data) => {
         const filteredProducts = data.filter(

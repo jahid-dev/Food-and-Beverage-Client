@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { BsStarHalf, BsFillCartCheckFill } from 'react-icons/bs';
 import { BiSolidPurchaseTag } from 'react-icons/bi';
 import { AuthContext } from '../../../firebase/Provider/AuthProvider';
@@ -7,13 +7,14 @@ import Swal from 'sweetalert2';
 
 const SoloFoodDetails = () => {
   const { user } = useContext(AuthContext);
-  const userEmail = user.email;
+  const userEmail = user ? user.email : ''; 
+
   const singleProduct = useLoaderData();
   const { ProductName, productCompany, ProductType, price, description, rating, photo } = singleProduct;
 
   const cartProduct = {
     ProductName,
-    UserEmail: userEmail,
+    userEmail,
     productCompany,
     ProductType,
     price,
@@ -23,7 +24,7 @@ const SoloFoodDetails = () => {
   };
 
   const handleAddToCart = () => {
-    fetch('http://localhost:5000/cart', {
+    fetch('https://food-and-beverage-server-xi.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

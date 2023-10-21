@@ -30,11 +30,6 @@ const AuthProvider = ({children}) => {
     }
 
 
-    const logOut = () => {
-        setLoading(true)
-       return signOut(auth);
-    }
-
       //observe auth state change
 
     useEffect(() =>{
@@ -49,6 +44,11 @@ const AuthProvider = ({children}) => {
         }
 
     } ,[])
+
+    const logOut = () => {
+        setLoading(true)
+       return signOut(auth);
+    }
 
     const authInfo = {
         setUser,
