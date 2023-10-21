@@ -103,7 +103,7 @@ const Navbar = () => {
             Add Product
             </Link>
             <Link to="/cart" className="block text-xl py-2" onClick={closeMenu}>
-            My Cart
+             My Cart
             </Link>
             <Link to="/contact" className="block text-xl py-2" onClick={closeMenu}>
               Contact Us

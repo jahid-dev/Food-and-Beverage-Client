@@ -12,7 +12,7 @@ const Cart = () => {
     .then((res) => res.json())
     .then((data) => {
       const filterCart = data.filter(
-        (singleCart) => singleCart.UserEmail == user.email
+        (singleCart) => singleCart.userEmail == user.email
       );
       setNewCart(filterCart);
     });
