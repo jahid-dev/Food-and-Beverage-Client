@@ -11,6 +11,9 @@ const BrandFood = ({ product }) => {
                     <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl card my-10 card-compact w-full md:w-96 lg:w-2/4 xl:w-3/5 shadow-lg ">
                         <figure>
                             <img className="w-96 h-96" src={photo} alt={ProductName} />
+                            <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold absolute top-2 right-2 text-white bg-black px-2 rounded-lg">
+                                Rating: {rating}
+                            </p>
                         </figure>
                         <div className="card-body py-10 ">
                             <h2 className="card-title text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold ">
@@ -33,7 +36,7 @@ const BrandFood = ({ product }) => {
                                 </Link>
                                 <Link to={`/solofooddetails/${_id}`}>
                                     <button className="btn btn-warning hover:btn-success text-base md:text-lg lg:text-xl xl:text-2xl">
-                                        View Product
+                                        View Details
                                     </button>
                                 </Link>
                             </div>
